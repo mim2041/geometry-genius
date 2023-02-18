@@ -1,75 +1,88 @@
+// simple b*h or w*l calculation
+
 function simpleAreaCalculation(inputId1, inputId2) {
     const inputFieldId1 = document.getElementById(inputId1);
-    const value1 = parseFloat(inputFieldId1.value);
-    console.log(value1);
-  
     const inputFieldId2 = document.getElementById(inputId2);
-    const value2 = parseFloat(inputFieldId2.value);
-    console.log(value2);
   
-    let result = parseFloat(value1 * value2);
-    result = result.toFixed(2);
-    console.log(result);
+    const isValid1 = checkInputValidation(inputFieldId1.value);
   
-    return result;
+    const isValid2 = checkInputValidation(inputFieldId2.value);
+  
+    if (isValid1 && isValid2) {
+      const value1 = parseFloat(inputFieldId1.value);
+      const value2 = parseFloat(inputFieldId2.value);
+      let result = parseFloat(value1 * value2);
+      result = result.toFixed(2);
+      return result;
+    } else {
+      return false;
+    }
   }
   
   // simple 0.5*b*h or w*l calculation
   
   function simpleAreaCalculation1(inputId1, inputId2) {
     const inputFieldId1 = document.getElementById(inputId1);
-    const value1 = parseFloat(inputFieldId1.value);
-    console.log(value1);
-  
     const inputFieldId2 = document.getElementById(inputId2);
-    const value2 = parseFloat(inputFieldId2.value);
-    console.log(value2);
   
-    let result = parseFloat(0.5 * value1 * value2);
-    result = result.toFixed(2);
-    console.log(result);
+    const isValid1 = checkInputValidation(inputFieldId1.value);
   
-    return result;
+    const isValid2 = checkInputValidation(inputFieldId2.value);
+  
+    if (isValid1 && isValid2) {
+      const value1 = parseFloat(inputFieldId1.value);
+      const value2 = parseFloat(inputFieldId2.value);
+      let result = parseFloat(0.5 * value1 * value2);
+      result = result.toFixed(2);
+      return result;
+    } else {
+      return false;
+    }
+
   }
   
   // simple pi*b*h or w*l calculation
   
   function simpleAreaCalculation2(inputId1, inputId2) {
     const inputFieldId1 = document.getElementById(inputId1);
-    const value1 = parseFloat(inputFieldId1.value);
-    console.log(value1);
-  
     const inputFieldId2 = document.getElementById(inputId2);
-    const value2 = parseFloat(inputFieldId2.value);
-    console.log(value2);
   
-    let result = parseFloat(3.14 * value1 * value2);
-    result = result.toFixed(2);
-    console.log(result);
+    const isValid1 = checkInputValidation(inputFieldId1.value);
   
-    return result;
+    const isValid2 = checkInputValidation(inputFieldId2.value);
+  
+    if (isValid1 && isValid2) {
+      const value1 = parseFloat(inputFieldId1.value);
+      const value2 = parseFloat(inputFieldId2.value);
+      let result = parseFloat(3.14 * value1 * value2);
+      result = result.toFixed(2);
+      return result;
+    } else {
+      return false;
+    }
   }
   // save calculation history
   
   function saveToCalculationArea(title, result) {
-    console.log(result, "from function");
-    //   const shapeTitleField = document.getElementById(title);
-    //   const shapeTitle = shapeTitleField.innerText;
-    const calculationList = document.getElementById("calculation-area");
-    const li = document.createElement("li");
-    //   li.innerText = result;
+    if (result) {
+      const calculationList = document.getElementById("calculation-area");
+      const li = document.createElement("li");
+      //   li.innerText = result;
   
-    const list = calculationList.querySelectorAll("li");
-    let numberOfCalculation = list.length;
-    li.innerHTML = `
-      <div class='m-1 p-2 border flex justify-between items-center '>
-          <span>${numberOfCalculation + 1} . ${title}</span>
-          <p>${result}</p>
-          <span class="p-2 bg-[blue] text-white rounded">Convert to m<sup>2</span>
-          
-      </div>
-  `;
-    document.getElementById("calculation-area").appendChild(li);
+      const list = calculationList.querySelectorAll("li");
+      let numberOfCalculation = list.length;
+      li.innerHTML = `
+            <div class='m-1 p-2 border flex justify-between items-center '>
+                <span>${numberOfCalculation + 1} . ${title}</span>
+                <p>${result}cm</p>
+                <span id="convert-to-m2" onclick="convert()" class="p-2 bg-[blue] text-white rounded">Convert to m<sup>2</span>
+                
+            </div>
+        `;
+      document.getElementById("calculation-area").appendChild(li);
+    } else {
+      alert("Invalid input provide valid input values");
+    }
   }
   
   document.getElementById("btn-rectangle").addEventListener("click", function () {
@@ -93,16 +106,16 @@ function simpleAreaCalculation(inputId1, inputId2) {
     .getElementById("btn-parallelogram")
     .addEventListener("click", function () {
       const result = simpleAreaCalculation(
-        "rectangle-input-field-w",
-        "rectangle-input-field-l"
+        "parallelogram-input-field-b",
+        "parallelogram-input-field-h"
       );
       const title = document.getElementById("title-parallelogram").innerText;
       saveToCalculationArea(title, result);
     });
   document.getElementById("btn-rhombus").addEventListener("click", function () {
     const result = simpleAreaCalculation1(
-      "rectangle-input-field-w",
-      "rectangle-input-field-l"
+      "rhombus-input-field-d1",
+      "rhombus-input-field-d2"
     );
     const title = document.getElementById("title-rhombus").innerText;
     saveToCalculationArea(title, result);
@@ -110,8 +123,8 @@ function simpleAreaCalculation(inputId1, inputId2) {
   
   document.getElementById("btn-pantagon").addEventListener("click", function () {
     const result = simpleAreaCalculation1(
-      "rectangle-input-field-w",
-      "rectangle-input-field-l"
+      "pantagon-input-field-p",
+      "pantagon-input-field-b"
     );
     const title = document.getElementById("title-pantagon").innerText;
     saveToCalculationArea(title, result);
@@ -125,14 +138,6 @@ function simpleAreaCalculation(inputId1, inputId2) {
     saveToCalculationArea(title, result);
   });
   
-  // document.getElementById("btn-ellipse").addEventListener("click", function () {
-  //   const result = simpleAreaCalculation2(
-  //     "id="ellipsis-input-field-a",
-  //     "id="ellipsis-input-field-b"
-  //   );
-  //   const title = document.getElementById("title-ellipse").innerText;
-  //   saveToCalculationArea(title, result);
-  // });
   
   // random color
   
@@ -149,32 +154,25 @@ function simpleAreaCalculation(inputId1, inputId2) {
     //   document.body.style.backgroundColor = randomColor();
     document.getElementById("triangle").style.backgroundColor = randomColor();
   });
-  document.getElementById("rectangle").addEventListener("mouseover", (event) => {
+  document.getElementById("rectangle").addEventListener("mouseenter", (event) => {
     // document.body.style.backgroundColor = randomColor();
     document.getElementById("rectangle").style.backgroundColor = randomColor();
   });
-  document
-    .getElementById("parallelogram")
-    .addEventListener("mouseover", (event) => {
-      // document.body.style.backgroundColor = randomColor();
-      document.getElementById("parallelogram").style.backgroundColor =
-        randomColor();
+  document.getElementById("parallelogram").addEventListener("mouseenter", (event) => {
+      document.getElementById("parallelogram").style.backgroundColor =randomColor();
     });
-  document.getElementById("rhombus").addEventListener("mouseover", (event) => {
-    // document.body.style.backgroundColor = randomColor();
+  document.getElementById("rhombus").addEventListener("mouseenter", (event) => {
     document.getElementById("rhombus").style.backgroundColor = randomColor();
   });
-  document.getElementById("pantagon").addEventListener("mouseover", (event) => {
-    // document.body.style.backgroundColor = randomColor();
+  document.getElementById("pantagon").addEventListener("mouseenter", (event) => {
     document.getElementById("pantagon").style.backgroundColor = randomColor();
   });
-  document.getElementById("ellipse").addEventListener("mouseover", (event) => {
-    // document.body.style.backgroundColor = randomColor();
+  document.getElementById("ellipse").addEventListener("mouseenter", (event) => {
     document.getElementById("ellipse").style.backgroundColor = randomColor();
   });
   
   function checkInputValidation(inputValue) {
     if (isNaN(inputValue) || inputValue === "" || inputValue < 0) {
       return false;
-    }
+    } else return true;
   }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Geometry Genius</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d4483a3c62.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header section started -->
+    <header class="header-content">
+      <div class="" id="header">
+        <h1 class="text-4xl">Interactive</h1>
+        <p class="text-2xl">Geometry Genius</p>
+      </div>
+      <div class="flex">
+        <div class="m-1 blog px-8 py-2 h-10 rounded text-white bg-[green]">
+          <a href="index.html" class="me-5">Home</a>
+        </div>
+        <div class="m-1 blog px-8 py-2 h-10 rounded text-white bg-blue-500">
+          <a href="blogs.html" class="me-5">Blogs</a>
+        </div>
+      </div>
+    </header>
+    <!-- header section end -->
+    <!-- main content -->
+    <main class="">
+      <!-- blogs -->
+      <div class="w-3/4 border mx-auto m-5 p-5 bg-blue-100 rounded">
+        
+        <h1 class="text-3xl text-[blue] m-3">1. What is DOM? What is the purpose of DOM</h1>
+        <hr class=""/>
+        <p class="text-lg m-5 text-justify">
+          DOM - The Document Object Model is a programming interface for web documents. It represents the page in such a way that programs can change the document structure, style and content. DOM represents the document as nodes, objects and arrayLists such a way that programming languages can interact with the page.
+          </p>
+          <img class="mx-auto mb-5" src="images/DOM.png" alt="">
+
+          <p class="text-lg m-5 text-justify">Dom is not a programming language, but without it, the JavaScript language wouldn't have any model or notion of web pages, HTML documents, SVG documents, and their component parts.
+        </p>
+      </div>
+      <div class="w-3/4 border mx-auto m-5 p-5 bg-blue-100 rounded">
+        <h1 class="text-3xl text-[blue] m-3">2. How to select elements from DOM</h1>
+        <hr />
+        <p class="text-lg m-5">
+          DOM - The Document Object Model represents the document as nodes, objects and arrayLists such a way that programming languages can interact with the page. There are 5 ways in which elements can be selected in a DOM using selectors.
+          <br>
+          1. <span class="font-bold">getElementsByTagName() :</span> This method returns all the elements that matches the specified Tag name.
+          <br>
+
+          2. <span class="font-bold">getElementsByClassName() :</span> This method returns all the elements that matches the specified Class name.
+
+          3. <span class="font-bold">getElementById()</span> : This method returns all the elements that matches the specified unique id.
+          <br>
+
+          4. <span class="font-bold">querySelectors()</span> : This one returns the first element that matches the specified CSS selector in the document.
+          <br>
+          5. <span class="font-bold">querySelectorAll()</span> : This method returns all the elements that match the specified CSS selector in the document.
+        </p>
+      </div><div class="w-3/4 border mx-auto m-5 p-5 bg-blue-100 rounded">
+        <h1 class="text-3xl text-[blue] m-3">3. What is event bubble?</h1>
+        <hr />
+        <p class="text-lg m-5">
+          Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, and both elements have registered a handle to that event. It is one way that events are handled in the browser. It directs an event to it's target. A bubbling event goes from the target element straight up. 
+        </p>
+        <img class="mx-auto mb-4" src="images/event-bubble.png" alt="">
+      </div><div class="w-3/4 border mx-auto m-5 p-5 bg-blue-100 rounded">
+        <h1 class="text-3xl text-[blue] m-3">4. What is callback function? Why is it used for?</h1>
+        <hr />
+        <p class="text-lg m-5">
+          A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+          <br>
+          Callback functions are needed because many JavaScript actions are asynchronous. Instead, it executes in the background while the rest of the code runs. A callback function's purpose is to execute code in response to an event.
+        </p>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="text-center bg-blue-500 p-3">
+      <p>Copyright &copy; 2023 Interactive
+        Geometry Genius</p>
+    </footer>
+    <!-- js file -->
+    <script src="js/index.js"></script>
+    <!-- bootstrap cdn -->
+  </body>
+</html>
