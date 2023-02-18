@@ -59,6 +59,10 @@
 
 /* Responsive for small device */
 @media screen and (max-width: 576px) {
+    .header-content{
+        flex-direction: column;
+        align-items: center;
+    }
     .cards-container{
         flex-direction: column;
         gap: 30px;
