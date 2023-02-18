@@ -7,5 +7,5 @@ function randomColor() {
   }
   
 document.getElementById('cards').addEventListener('mouseover',function(event){
-    event.target.parentNode.style.backgroundColor = randomColor();
+    event.target.style.backgroundColor = randomColor();
 })

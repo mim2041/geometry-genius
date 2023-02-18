@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Geometry Genius</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d4483a3c62.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="header-content">
+      <div class="" id="header">
+        <h1 class="text-4xl">Interactive</h1>
+        <p class="text-2xl">Geometry Genius</p>
+      </div>
+      <div class="blog px-8 py-2 h-10 rounded text-white bg-blue-500">Blog</div>
+    </header>
+
+    <!-- Header Section Done -->
+
+    <main>
+      <!-- Main section -->
+      <section class="cards-container">
+        <!-- Cards Section -->
+        <div class="cards">
+          <div class="card pt-10 rounded-lg text-center border-2" id="triangle">
+            <img class="w-3/5 mx-auto mb-5" src="images/triangle.png" alt="" />
+            <h2 class="text-2xl text-center m-3" id="title-triangle">
+              Triangle
+            </h2>
+            <p class="mx-auto">
+              Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b
+              <i class="fa-solid fa-xmark"></i> h
+            </p>
+            <p class="m-3">
+              <input
+              
+                id="triangle-input-field-b"
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="b"
+              />cm
+              <input
+              
+                id="triangle-input-field-h"
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="h"
+              />cm
+            </p>
+            <button
+              id="btn-triangle"
+              class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <div
+            class="card pt-10 rounded-lg text-center border-2"
+            id="rectangle"
+          >
+            <img
+              class="w-3/5 mx-auto mb-5 mt-8"
+              src="images/rectangle.png"
+              alt=""
+            />
+            <h2 class="text-2xl text-center m-3" id="title-rectangle">
+              Rectangle
+            </h2>
+            <p class="mx-auto">
+              Area (A) = w <i class="fa-solid fa-xmark"></i> l
+            </p>
+            <p class="m-3">
+              <input
+              
+                id="rectangle-input-field-w"
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="w"
+              />cm
+              <input
+              
+                id="rectangle-input-field-l"
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="l"
+              />cm
+            </p>
+            <button
+              id="btn-rectangle"
+              class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <div
+            class="card pt-10 rounded-lg text-center border-2"
+            id="parallelogram"
+          >
+            <img
+              class="w-4/6 mx-auto mb-5 m-8"
+              src="images/parallelogram.png"
+              alt=""
+            />
+            <h2 class="text-2xl text-center m-3" id="title-parallelogram">Parallelogram</h2>
+            <p class="mx-auto">
+              Area (A) = b <i class="fa-solid fa-xmark"></i> h
+            </p>
+            <p class="m-3">
+              <input
+                id="parallelogram-input-field-w"
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="b"
+              />cm
+              <input
+              id="parallelogram-input-field-h"
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="h"
+              />cm
+            </p>
+            <button
+            id="btn-parallelogram"
+              class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <div class="card pt-10 rounded-lg text-center border-2" id="rhombus">
+            <img
+              class="rhombus-img w-3/5 mt-6 mx-auto mb-7"
+              src="images/rhombus.png"
+              alt=""
+            />
+            <h2 class="text-2xl text-center m-3" id="title-rhombus">Rhombus</h2>
+            <p class="mx-auto">
+              Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> d1
+              <i class="fa-solid fa-xmark"></i> d2
+            </p>
+            <p class="m-3">
+              <input
+              
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="d1"
+              />cm
+              <input
+              
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="d2"
+              />cm
+            </p>
+            <button
+            id="btn-rhombus"
+              class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white mt-2"
+            >
+              Calculate
+            </button>
+          </div>
+          <div class="card pt-10 rounded-lg text-center border-2" id="pantagon">
+            <img class="w-3/5 mx-auto mb-5" src="images/pentagon.png" alt="" />
+            <h2 class="text-2xl text-center m-3" id="title-pantagon">Pantagon</h2>
+            <p class="mx-auto">
+              Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> p
+              <i class="fa-solid fa-xmark"></i> b
+            </p>
+            <p class="m-3">
+              <input
+              
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="p"
+              />cm
+              <input
+              
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="b"
+              />cm
+            </p>
+            <button
+            id="btn-pantagon"
+              class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <div class="card pt-10 rounded-lg text-center border-2" id="ellipse">
+            <img
+              class="w-3/4 mx-auto mt-6 mb-8"
+              src="images/ellipse.png"
+              alt=""
+            />
+            <h2 class="text-2xl m-3" id="title-ellipse">Ellipse</h2>
+            <p class="ellipsis-p">
+              Area (A) =
+              <img class="w-4 h-3 mt-2" src="images/pi.jfif" alt="" /> a
+              <i class="fa-solid fa-xmark mt-1"></i> b
+            </p>
+            <p class="m-3">
+              <input
+              
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="a"
+              />cm
+              <input
+              
+                class="w-2/6 bg-slate-200 my-2 mr-1 px-2"
+                type="text"
+                placeholder="b"
+              />cm
+            </p>
+            <button
+            id="btn-pantagon"
+              class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+        <!-- Area Calculation area -->
+        <div class="calculation-area border-2 rounded-lg pt-8 px-4">
+          <h3 class="calculation-header text-2xl">Area Calculation</h3>
+          <div class="">
+            <ol id="calculation-area"></ol>
+            <span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script2.js"></script>
+  </body>
+</html>
