@@ -3,7 +3,7 @@
 .header-content{
     display: flex;
     justify-content: space-between;
-    margin: 30px 20px;
+    margin: 30px;
     background: rgba(16, 144, 216, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -13,3 +13,23 @@
     margin-top: 15px;
 }
 
+/* Cards styles */
+.cards-container{
+    margin: 30px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.card{
+    width: 300px;
+    /* height: 350px; */
+    padding-bottom: 15px;
+    box-shadow: 2px  #afacac;
+    
+}
+.card button{
+    margin-bottom: 8px;
+    
+}
