@@ -1,0 +1,15 @@
+/* Header contents styles */
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20px;
+    background: rgba(16, 144, 216, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+.blog{
+    display: flex;
+    margin-top: 15px;
+}
+
