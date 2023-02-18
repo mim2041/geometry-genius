@@ -20,16 +20,71 @@
 .cards{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    gap: 30px;
 }
 .card{
-    width: 300px;
-    /* height: 350px; */
-    padding-bottom: 15px;
-    box-shadow: 2px  #afacac;
+    width: 340px;
     
 }
 .card button{
-    margin-bottom: 8px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.ellipsis-p{
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+
+/* Calculation area */
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.calculation-area{
+    width: 340px;
+    height: 340px;
     
+}
+.calculation-header{
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+/* Responsive Styles */
+
+/* Responsive for small device */
+@media screen and (max-width: 576px) {
+    .cards-container{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* Responsive for Medium Devices */
+@media screen and (min-width:577px) and (max-width: 992px) {
+    .cards-container{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        /* margin: 30px; */
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card{
+        width: 320px;
+        
+    }
+    .rhombus-img{
+        width: 45%;
+    }
 }
