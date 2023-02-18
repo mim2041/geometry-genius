@@ -20,8 +20,8 @@
 
     <!-- Header Section Done -->
 
-    <body>
-        <!-- Body -->
+    <main>
+        <!-- Main section -->
         <section class="cards-container">
             <!-- Cards Section -->
             <div class="cards">
@@ -29,29 +29,29 @@
                     <img class="w-3/5 mx-auto mb-5" src="images/triangle.png" alt="">
                     <h2 class="text-2xl text-center m-3">Triangle</h2>
                     <p class="mx-auto">Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
-                    <p class="m-3"><input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="b">cm <input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="h">cm</p>
-                    <button class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white">Calculate</button>
+                    <p class="m-3"><input id="triangle-input-field-b" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="b">cm <input id="triangle-input-field-h" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="h">cm</p>
+                    <button id="btn-triangle" class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white">Calculate</button>
                 </div>
                 <div class="card pt-10 rounded-lg text-center border-2">
                     <img class="w-3/5 mx-auto mb-5 mt-8" src="images/rectangle.png" alt="">
                     <h2 class="text-2xl text-center m-3">Rectangle</h2>
                     <p class="mx-auto">Area (A) = w <i class="fa-solid fa-xmark"></i> l</p>
-                    <p class="m-3"><input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="w">cm <input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="l">cm</p>
-                    <button class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white">Calculate</button>
+                    <p class="m-3"><input id="rectangle-input-field-w" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="w">cm <input id="rectangle-input-field-l" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="l">cm</p>
+                    <button id="btn-rectangle" class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white">Calculate</button>
                 </div>
                 <div class="card pt-10 rounded-lg text-center border-2">
                     <img class="w-4/6 mx-auto mb-5 m-8" src="images/parallelogram.png" alt="">
                     <h2 class="text-2xl text-center m-3">Parallelogram</h2>
                     <p class="mx-auto">Area (A) = b <i class="fa-solid fa-xmark"></i> h</p>
-                    <p class="m-3"><input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="b">cm <input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="h">cm</p>
-                    <button class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white">Calculate</button>
+                    <p class="m-3"><input id="parallelogram-input-field-b" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="b">cm <input id="parallelogram-input-field-h" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="h">cm</p>
+                    <button id="btn-parallelogram" class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white">Calculate</button>
                 </div>
                 <div class="card pt-10 rounded-lg text-center border-2">
                     <img class="rhombus-img w-3/5 mt-6 mx-auto  mb-7" src="images/rhombus.png" alt="">
                     <h2 class="text-2xl text-center m-3">Rhombus</h2>
                     <p class="mx-auto">Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> d1 <i class="fa-solid fa-xmark"></i> d2</p>
-                    <p class="m-3"><input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="d1">cm <input class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="d2">cm</p>
-                    <button class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white mt-2">Calculate</button>
+                    <p class="m-3"><input id="rhombus-input-field-d1" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="d1">cm <input id="rhombus-input-field-d2" class="w-2/6 bg-slate-200 my-2 mr-1 px-2" type="text" placeholder="d2">cm</p>
+                    <button id="btn-rhombus" class="bg-blue-500 w-11/12 mx-auto py-1 rounded-lg text-white mt-2">Calculate</button>
                 </div>
                 <div class="card pt-10 rounded-lg text-center border-2">
                     <img class="w-3/5 mx-auto mb-5" src="images/pentagon.png" alt="">
@@ -70,10 +70,15 @@
                 
             </div>
             <!-- Area Calculation area -->
-            <div class="calculation-area border-2 rounded-lg pt-8 px-4">
+            <div id="calculation-area" class="calculation-area border-2 rounded-lg pt-8 px-4">
                 <h3 class="calculation-header text-2xl">Area Calculation</h3>
+                <ol type="1" id="display-lists">
+
+                </ol>
             </div>
         </section>
-    </body>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
